@@ -14,15 +14,15 @@ function InvestmentForm({ investmentData, handleInvestmentDataChange }) {
             <div className="input-group">
                 <div>
                     <label htmlFor="">Initial Investment</label>
-                    <input type="number" value={investmentData.initial_investment} onChange={(e) => handleInputChange(e, 'initialInvestment')} />
+                    <input type="number" value={investmentData.initialInvestment} onChange={(e) => handleInputChange(e, 'initialInvestment')} />
                 </div>
                 <div>
                     <label htmlFor="">Anual Investment</label>
-                    <input type="number" value={investmentData.annual_investment} onChange={(e) => handleInputChange(e, 'annualInvestment')} />
+                    <input type="number" value={investmentData.annualInvestment} onChange={(e) => handleInputChange(e, 'annualInvestment')} />
                 </div>
                 <div>
                     <label htmlFor="">Expected Return</label>
-                    <input type="number" value={investmentData.expected_return} onChange={(e) => handleInputChange(e, 'expectedReturn')} />
+                    <input type="number" value={investmentData.expectedReturn} onChange={(e) => handleInputChange(e, 'expectedReturn')} />
                 </div>
                 <div>
                     <label htmlFor="">Duration</label>
