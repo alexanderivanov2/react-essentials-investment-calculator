@@ -5,10 +5,10 @@ import InvestmentResultTable from './InvestmentResultTable';
 
 function InvestmentCalculator() {
     const [investmentData, setInvestmentData] = useState({
-        initialInvestment: 0,
-        annualInvestment: 0,
-        expectedReturn: 0,
-        duration: 0,
+        initialInvestment: 1000,
+        annualInvestment: 1200,
+        expectedReturn: 6,
+        duration: 10,
     });
 
     const investmentResults = calculateInvestmentResults(investmentData);
