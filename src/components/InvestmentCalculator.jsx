@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import InvestmentForm from './InvestmentForm';
-import { calculateInvestmentResults } from '../util/investment';
+import { calculateInvestmentResults, formatter } from '../util/investment';
+import InvestmentResultTable from './InvestmentResultTable';
 
 function InvestmentCalculator() {
     const [investmentData, setInvestmentData] = useState({
@@ -10,8 +11,7 @@ function InvestmentCalculator() {
         duration: 0,
     });
 
-    const investmentResults = calculateInvestmentResults(investmentData)
-    console.dir(investmentResults)
+    const investmentResults = calculateInvestmentResults(investmentData);
     const handleInvestmentDataChange = (inputName, value) => {
         setInvestmentData(prevInvestmentData => ({
             ...prevInvestmentData,
@@ -21,16 +21,8 @@ function InvestmentCalculator() {
 
     return (
         <div>
-            <InvestmentForm investmentData={investmentData} handleInvestmentDataChange={handleInvestmentDataChange}/>
-            
-            
-
-
-
-            <p>Initial Investment: { investmentData.initialInvestment }</p>
-            <p>Anual Investment: { investmentData.annualInvestment }</p>
-            <p>EXPECTED RETURN: { investmentData.expectedReturn }</p>
-            <p>DURATION: { investmentData.duration}</p>
+            <InvestmentForm investmentData={investmentData} handleInvestmentDataChange={handleInvestmentDataChange} />
+            <InvestmentResultTable investmentResults={investmentResults}/>
         </div>
     )
 }

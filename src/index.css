@@ -92,3 +92,10 @@ body {
 .center {
   text-align: center;
 }
+
+
+.result-list {
+  span {
+    padding-right: 1rem;
+  }
+}
